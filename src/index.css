@@ -12,3 +12,32 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.rowheight{
+  height:2vw;
+  font-weight: bolder;
+}
+
+.containerheight{
+  height:40vw;
+}
+
+.padding{
+  padding: 2rem 2rem
+}
+
+.floating{
+  position: absolute;
+  top:10%;
+  left: 1%;
+
+}
+.dwarves{
+  background-color: gainsboro!important;
+}
+.elves{
+  background-color: darkgreen!important;
+}
+.dragons{
+  background-color: gold!important;
+}

@@ -1,26 +1,33 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import {BrowserRouter, NavLink, Route} from 'react-router-dom';
+import {Navlist} from './components/navlist/Navlist';
+import {Home} from './components/home/Home';
+import {Dwarves} from './components/dwarves/Dwarves';
+import {Elves} from './components/elves/Elves';
+import {Dragons} from './components/dragons/Dragons';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <BrowserRouter>
+        <>
+          <Navlist/>
+          <div className='jumbotron bg-info containerheight padding'>
+            <div className='container'>
+              <Route exact path="/" render={()=>{
+                  return <Home/>}}/>
+              <Route path="/dwarves" render={()=>{
+                  return <Dwarves/>}}/>
+              <Route path="/elves" render={()=>{
+                  return <Elves/>}}/>
+              <Route path="/dragons" render={()=>{
+                  return <Dragons/>}}/>
+            </div>
+          </div>
+
+        </>
+      </BrowserRouter>
     );
   }
 }
