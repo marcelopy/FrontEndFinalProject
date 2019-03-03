@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {BrowserRouter, NavLink, Route} from 'react-router-dom';
+import {BrowserRouter, Route} from 'react-router-dom';
 import {Navlist} from './components/navlist/Navlist';
 import {Home} from './components/home/Home';
 import {Dwarves} from './components/dwarves/Dwarves';

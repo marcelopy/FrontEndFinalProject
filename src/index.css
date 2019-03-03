@@ -13,13 +13,17 @@ code {
     monospace;
 }
 
+.complementarycolor{
+  background-color: #54b4d1;
+}
+
 .rowheight{
-  height:2vw;
+  height:1rem;
   font-weight: bolder;
 }
 
 .containerheight{
-  height:40vw;
+  height:34rem;
 }
 
 .padding{
@@ -28,8 +32,8 @@ code {
 
 .floating{
   position: absolute;
-  top:10%;
-  left: 1%;
+  top:4rem;
+  left: 1rem;
 
 }
 .dwarves{
@@ -40,4 +44,47 @@ code {
 }
 .dragons{
   background-color: gold!important;
+}
+
+.infocard{
+  box-sizing: border-box;
+  position:absolute;
+  top:8rem;
+  left:1rem;
+  width:17rem;
+  padding-bottom: 1rem;
+}
+
+.infocardbasket{
+  box-sizing: border-box;
+  background-color: #ae00ff;
+  position:absolute;
+  top:4rem;
+  right:1rem;
+  width:17rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+.infocardbasket img{
+  width:8rem;
+  align-self: center;
+  margin: 1rem 0;
+}
+
+.buttontext{
+  font-size: 1rem;
+  font-weight: 500;
+  height: 2rem;
+  opacity: .7;
+  border-radius: .3rem;
+}
+
+.moreinfocard{
+  box-sizing: border-box;
+  position:absolute;
+  top:12rem;
+  left:20rem;
+  width:30rem;
+  height: 15rem;
 }
