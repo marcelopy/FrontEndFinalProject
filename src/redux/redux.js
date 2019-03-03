@@ -1,6 +1,8 @@
+import React from 'react';
 import {createStore} from 'redux';
+import {NavLink} from 'react-router-dom';
 
-const initialState={counter:0, isExpanded:'(more)'};
+const initialState={counter:0, isExpanded:'(more)', elvesinfo:'/elves/singer/singerinfo'};
 
 const reducer = (state=initialState, action)=>{
   const copyOfState={...state};
@@ -9,13 +11,10 @@ const reducer = (state=initialState, action)=>{
         copyOfState.counter=state.counter+1;
       return copyOfState;
     case 'DECREASECOUNTER':
-    copyOfState.counter>0?copyOfState.counter=state.counter-1:copyOfState.counter=0;
+      copyOfState.counter>0?copyOfState.counter=state.counter-1:copyOfState.counter=0;
       return copyOfState;
-    case 'TOGGLEEXPAND':
-      copyOfState.isExpanded==='(more)'?copyOfState.isExpanded='(less)':copyOfState.isExpanded='(more)';
-      return copyOfState;
-    case 'WHATTITLE':
-      console.log(state.counter);
+    case 'RESETCOUNTER':
+      copyOfState.counter=0;
       return copyOfState;
     default:
       return state;
@@ -35,15 +34,9 @@ export const decreaseCounter=(ev)=>{
   }
 }
 
-export const toggleExpand=(ev)=>{
+export const resetCounter=(ev)=>{
   return{
-    type:'TOGGLEEXPAND',
-  }
-}
-
-export const whatTitle=(ev)=>{
-  return{
-    type:'WHATTITLE',
+    type:'RESETCOUNTER',
   }
 }
 

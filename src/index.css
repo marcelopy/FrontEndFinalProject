@@ -88,3 +88,7 @@ code {
   width:30rem;
   height: 15rem;
 }
+
+.pointer:hover{
+  cursor: pointer;
+}

@@ -7,7 +7,7 @@ export class Basket extends Component{
     return(
       <>
       <div className="card infocardbasket">
-        <img src={basket} className="card-img-top"/>
+        <img alt='' src={basket} className="card-img-top"/>
         <div className="card-body">
           <h4 className="card-title">Checkout</h4>
           <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>

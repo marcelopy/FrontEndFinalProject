@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import elves from '../images/elves.jpg';
 import {SubelvesContainer} from './Subelves';
-// import {Basket} from '../basket/basket.js'
+import {Basket} from '../basket/basket.js'
 
 export class Elves extends Component{
   render(){
@@ -14,6 +14,7 @@ export class Elves extends Component{
           <p className="rowheight">A well-placed deadly wound, albeit perfumed, can still kill you.</p>
         </div>
         <SubelvesContainer/>
+        <Basket />
       </>
     )
   }
