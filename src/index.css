@@ -92,3 +92,7 @@ code {
 .pointer:hover{
   cursor: pointer;
 }
+
+.list{
+  list-style: none;
+}

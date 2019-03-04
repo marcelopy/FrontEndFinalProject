@@ -3,7 +3,7 @@ import {NavLink, Route} from 'react-router-dom';
 import elves from '../images/elves.jpg';
 import {connect} from 'react-redux';
 import {withRouter} from 'react-router';
-import {increaseCounter, decreaseCounter, resetCounter} from '../../redux/redux';
+import {increaseCounter, decreaseCounter, resetCounter, toBasketSinger, toBasketShadower, toBasketRestorer} from '../../redux/redux';
 
 
 class Subelves extends Component{
@@ -23,45 +23,45 @@ class Subelves extends Component{
             </li>
           </ul>
         </nav>
-        <Route path="/elves/singer" render={()=>
+        <Route path="/elves/singer" render={(match)=>
           <>
             <div className="infocard elves text-center">
-              <h3>Singer</h3>
+              <h3>{this.props.elves[0].title}</h3>
               <img alt='' className="img-thumbnail img-fluid max-width:100% max-height:40%" src={elves}/>
-              <p>The best there is for a quick boom! <span className="pointer"><NavLink to="/elves/singer/singerinfo">(more)</NavLink></span></p>
+              <p>{this.props.elves[0].desc} <span className="pointer"><NavLink to="/elves/singer/singerinfo">(more)</NavLink></span></p>
               <button onClick={this.props.decreaseCounter} type="button" className="btn-secondary buttontext">-</button>
               <span className="mx-5">{this.props.counter}</span>
               <button onClick={this.props.increaseCounter} type="button" className="btn-secondary buttontext">+</button>
-              <p></p>
-              <p><button onClick={this.props.whatTitle} type="button" className="btn btn-info text-dark">To Basket</button></p>
+              <p className='font-weight-bold'>Price each:{this.props.elves[0].price}GP</p>
+              <p><button onClick={this.props.toBasketSinger} type="button" className="btn btn-info text-dark">To Basket</button></p>
             </div>
           </>
         }/>
-        <Route path="/elves/shadower" render={()=>
+        <Route path="/elves/shadower" render={(match)=>
           <>
             <div className="infocard elves text-center">
-              <h3>Shadower</h3>
+              <h3>{this.props.elves[1].title}</h3>
               <img alt='' className="img-thumbnail img-fluid max-width:100%" src={elves}/>
-              <p>The best there is for a quick boom! <span className="pointer"><NavLink to="/elves/shadower/shadowerinfo">(more)</NavLink></span></p>
+              <p>{this.props.elves[1].desc}<span className="pointer"><NavLink to="/elves/shadower/shadowerinfo">(more)</NavLink></span></p>
               <button onClick={this.props.decreaseCounter} type="button" className="btn-secondary buttontext">-</button>
               <span className="mx-5">{this.props.counter}</span>
               <button onClick={this.props.increaseCounter} type="button" className="btn-secondary buttontext">+</button>
-              <p></p>
-              <p><button onClick={this.props.whatTitle} type="button" className="btn btn-info text-dark">To Basket</button></p>
+              <p className='font-weight-bold'>Price each:{this.props.elves[1].price}GP</p>
+              <p><button onClick={this.props.toBasketShadower} type="button" className="btn btn-info text-dark">To Basket</button></p>
             </div>
           </>
         }/>
         <Route path="/elves/restorer" render={()=>
           <>
             <div className="infocard elves text-center">
-              <h3>Restorer</h3>
+              <h3>{this.props.elves[2].title}</h3>
               <img  alt='' className="img-thumbnail img-fluid max-width:100%" src={elves}/>
-              <p>The best there is for a quick boom! <span className="pointer"><NavLink to="/elves/restorer/restorerinfo">(more)</NavLink></span></p>
+              <p>{this.props.elves[2].desc}<span className="pointer"><NavLink to="/elves/restorer/restorerinfo">(more)</NavLink></span></p>
               <button onClick={this.props.decreaseCounter} type="button" className="btn-secondary buttontext">-</button>
               <span className="mx-5">{this.props.counter}</span>
               <button onClick={this.props.increaseCounter} type="button" className="btn-secondary buttontext">+</button>
-              <p></p>
-              <p><button onClick={this.props.whatTitle} type="button" className="btn btn-info text-dark">To Basket</button></p>
+              <p className='font-weight-bold'>Price each:{this.props.elves[2].price}GP</p>
+              <p><button onClick={this.props.toBasketRestorer} type="button" className="btn btn-info text-dark">To Basket</button></p>
             </div>
           </>
         }/>
@@ -69,8 +69,7 @@ class Subelves extends Component{
           <>
             <div className="card text-center elves moreinfocard">
               <div className="card-body">
-                <h5 className="card-title">Special title treatment</h5>
-                <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <h3 className="card-title">{this.props.elves[0].extra}</h3>
                 <NavLink to="/elves/singer">Close</NavLink>
               </div>
             </div>
@@ -80,8 +79,7 @@ class Subelves extends Component{
             <>
               <div className="card text-center elves moreinfocard">
                 <div className="card-body">
-                  <h5 className="card-title">Special title treatment</h5>
-                  <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  <h3 className="card-title">{this.props.elves[1].extra}</h3>
                   <NavLink to="/elves/shadower">Close</NavLink>
                 </div>
               </div>
@@ -91,8 +89,7 @@ class Subelves extends Component{
             <>
               <div className="card text-center elves moreinfocard">
                 <div className="card-body">
-                  <h5 className="card-title">Special title treatment</h5>
-                  <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  <h3 className="card-title">{this.props.elves[2].extra}</h3>
                   <NavLink to="/elves/restorer">Close</NavLink>
                 </div>
               </div>
@@ -106,7 +103,9 @@ class Subelves extends Component{
 const mapStateToProps = state =>{
   return{
     counter:state.counter,
-    isExpanded:state.isExpanded
+    isExpanded:state.isExpanded,
+    elves:state.elves,
+    itemSelected:state.itemSelected
   }
 }
 
@@ -115,6 +114,9 @@ const mapDispatchToProps = dispatch => {
     increaseCounter: (ev) => dispatch(increaseCounter(ev)),
     decreaseCounter: (ev) => dispatch(decreaseCounter(ev)),
     resetCounter:(ev)=>dispatch(resetCounter(ev)),
+    toBasketSinger:(ev)=>dispatch(toBasketSinger(ev)),
+    toBasketShadower:(ev)=>dispatch(toBasketShadower(ev)),
+    toBasketRestorer:(ev)=>dispatch(toBasketRestorer(ev))
   }
 }
 export const SubelvesContainer = withRouter(connect(mapStateToProps,mapDispatchToProps)(Subelves))
