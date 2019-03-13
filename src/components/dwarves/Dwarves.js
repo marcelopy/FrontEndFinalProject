@@ -1,19 +1,20 @@
 import React, {Component} from 'react';
-import dwarves from '../images/dwarves.jpg';
 import {Subdwarves} from './Subdwarves';
-// import {Basket} from '../basket/basket.js'
+import dwarvesimg from '../images/dwarves.jpg';
+import {BasketContainer} from'../basket/basket';
 
-export class Dwarves extends Component{
+export class Dwarves extends Component {
   render(){
     return(
       <>
-        <div className="text-center">
+      <div className="text-center dwarves containerheight">
           <h1>Dwarves!</h1>
-          <img alt='' className="rounded-circle w-50 m-3" src={dwarves}/>
+          <img alt='' className="rounded-circle w-50 m-2" src={dwarvesimg}/>
           <p className="rowheight">Get the toughest, rockiest, most inhebriated fighters of them all!</p>
           <p className="rowheight">Because nothing shows more love than tough love.</p>
-        </div>
-        <Subdwarves />
+      </div>
+      <Subdwarves />
+      <BasketContainer/>
       </>
     )
   }

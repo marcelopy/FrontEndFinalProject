@@ -1,19 +1,19 @@
 import React, {Component} from 'react';
-import dragon from '../images/dragon.jpg';
-import {Subdragons} from './Subdragons';
-// import {Basket} from '../basket/basket.js'
+import {NavLink, Route} from 'react-router-dom';
+import {Home} from '../home/Home';
+import dragonsimg from '../images/dragons.jpg'
 
-export class Dragons extends Component{
+
+export class Dragons extends Component {
   render(){
     return(
       <>
-        <div className="text-center">
-          <h1>Dragons!</h1>
-          <img alt='' className="rounded-circle w-50 m-3" src={dragon}/>
-          <p className="rowheight">Should we say anything more? (no, seriously)</p>
-          <p className="rowheight">Ultimate weapon, all terrain fighter. But it will cost you. Dearly.</p>
-        </div>
-        <Subdragons />
+      <div className="text-center dragons containerheight">
+                <h1>Dragons!</h1>
+                <img alt='' className="rounded-circle w-50 m-2" src={dragonsimg}/>
+                <p className="rowheight">Should we say anything more? (no, seriously)</p>
+                <p className="rowheight">Ultimate weapon, all terrain fighter. But it will cost you. Dearly.</p>
+              </div>
       </>
     )
   }

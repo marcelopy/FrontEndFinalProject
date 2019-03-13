@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import basket from '../images/basket.jpg';
 import {connect} from 'react-redux';
-import {withRouter} from 'react-router';
+// import {submitcheckout} from '../../redux/redux';
+import {Redirect, NavLink} from 'react-router-dom';
 
 
 
@@ -12,13 +13,14 @@ class Basket extends Component{
       <div className="card infocardbasket">
         <img alt='' src={basket} className="card-img-top"/>
         <div className="card-body">
-          <h4 className="card-title">Checkout Total:{this.props.totalMoney}</h4>
-          <p className="card-text">{this.props.itemsInBasket.map((item,index)=>{
+          <h4 className="card-title">Checkout Total:{this.props.totalbasket}</h4>
+          <p className="card-text">{this.props.basket.map((item,index)=>{
                   return(
-                    <li className="list" key={index}>{this.props.itemSelected[index]}x{item}</li>
+                    <li className="list" key={index}>{item.product}x{item.qty}</li>
                   )
           })}</p>
         </div>
+          <NavLink className="nav-link" to="/logout" onClick={this.props.resetCounter}>Logout</NavLink>
       </div>
       </>
     )
@@ -26,12 +28,16 @@ class Basket extends Component{
 }
 const mapStateToProps = state =>{
   return{
-    basketQuantity:state.basketQuantity,
-    elves:state.elves,
-    itemsInBasket:state.itemsInBasket,
+    basket:state.basket,
     itemSelected:state.itemSelected,
-    totalMoney:state.totalMoney
+    totalbasket:state.totalbasket
   }
 }
 
-export const BasketContainer = withRouter(connect(mapStateToProps)(Basket))
+// const mapDispatchToProps = dispatch => {
+//   return {
+//     submitcheckout: (ev) => dispatch(submitcheckout(ev)),
+//   }
+// }
+
+export const BasketContainer = connect(mapStateToProps)(Basket)

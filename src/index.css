@@ -12,35 +12,64 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
+a:hover{
+  text-decoration: none;
+}
+p{
+  margin:0;
+}
+p.pointer:hover{
+  cursor: pointer;
+}
+.navbarcolor{
+  background-color: #b1c9e0;
+}
+.mainareacolor{
+  background-color: #759fc7;
+}
 .complementarycolor{
   background-color: #54b4d1;
 }
 
 .rowheight{
-  height:1rem;
+  height:2rem;
   font-weight: bolder;
 }
 
 .containerheight{
-  height:34rem;
+  height:36rem;
 }
 
 .padding{
-  padding: 2rem 2rem
+  padding: 2rem;
 }
 
 .floating{
   position: absolute;
   top:4rem;
   left: 1rem;
-
+}
+.image{
+  padding:1rem;
+  width: 70%;
+  margin: 0 auto;
 }
 .dwarves{
-  background-color: gainsboro!important;
+  background-color: #6c7d74;
 }
+.dwarvesnav{
+  background-color: #7d726c;
+}
+.dwarvesbg{
+  background-color: #7d6e6c;
+}
+.dwarvestext{
+  color: 	#34383b;
+}
+
+
 .elves{
-  background-color: darkgreen!important;
+  background-color: #197e19!important;
 }
 .dragons{
   background-color: gold!important;
@@ -86,13 +115,7 @@ code {
   top:12rem;
   left:20rem;
   width:30rem;
-  height: 15rem;
 }
-
-.pointer:hover{
-  cursor: pointer;
-}
-
 .list{
   list-style: none;
 }
