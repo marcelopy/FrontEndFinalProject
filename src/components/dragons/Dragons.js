@@ -1,6 +1,4 @@
 import React, {Component} from 'react';
-import {NavLink, Route} from 'react-router-dom';
-import {Home} from '../home/Home';
 import dragonsimg from '../images/dragons.jpg'
 
 

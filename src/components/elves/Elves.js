@@ -1,6 +1,4 @@
 import React, {Component} from 'react';
-import {NavLink, Route} from 'react-router-dom';
-import {Home} from '../home/Home';
 import elvesimg from '../images/elves.jpg'
 export class Elves extends Component {
   render(){

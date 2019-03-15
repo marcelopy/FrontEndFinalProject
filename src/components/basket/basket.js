@@ -1,24 +1,29 @@
 import React, {Component} from 'react';
 import basket from '../images/basket.jpg';
 import {connect} from 'react-redux';
-// import {submitcheckout} from '../../redux/redux';
-import {Redirect, NavLink} from 'react-router-dom';
+import {removeitem} from '../../redux/redux';
+import {NavLink} from 'react-router-dom';
 
 
 
 class Basket extends Component{
+
   render(){
     return(
       <>
       <div className="card infocardbasket">
         <img alt='' src={basket} className="card-img-top"/>
         <div className="card-body">
-          <h4 className="card-title">Checkout Total:{this.props.totalbasket}</h4>
-          <p className="card-text">{this.props.basket.map((item,index)=>{
+          <h5 className="card-title">Checkout Total:{this.props.totalbasket} GP</h5>
+          <div className="card-text">{this.props.basket.map((item,index)=>{
                   return(
-                    <li className="list" key={index}>{item.product}x{item.qty}</li>
+
+                    <div key={index}>
+                  {item.qty>0 && <li className="list">{item.product}x{item.qty}={item.qty*item.price}GP<button title={item.product} price={item.price} identifier={item.identifier} className="closeX" onClick={this.props.removeitem}>x</button></li>}
+                    </div>
+
                   )
-          })}</p>
+          })}</div>
         </div>
           <NavLink className="nav-link" to="/logout" onClick={this.props.resetCounter}>Logout</NavLink>
       </div>
@@ -29,15 +34,14 @@ class Basket extends Component{
 const mapStateToProps = state =>{
   return{
     basket:state.basket,
-    itemSelected:state.itemSelected,
     totalbasket:state.totalbasket
   }
 }
 
-// const mapDispatchToProps = dispatch => {
-//   return {
-//     submitcheckout: (ev) => dispatch(submitcheckout(ev)),
-//   }
-// }
+const mapDispatchToProps = dispatch =>{
+  return{
+    removeitem: ev => dispatch(removeitem(ev))
+  }
+}
 
-export const BasketContainer = connect(mapStateToProps)(Basket)
+export const BasketContainer = connect(mapStateToProps, mapDispatchToProps)(Basket)

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {BrowserRouter, NavLink, Route} from 'react-router-dom';
+import {NavLink, Route} from 'react-router-dom';
 import {Home} from '../home/Home';
 import {Dwarves} from '../dwarves/Dwarves';
 import {Elves} from '../elves/Elves';

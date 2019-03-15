@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {infoproducts} from '../infoproducts/infoproducts';
+import {infoproducts} from './infoproducts';
 import demolisher from '../images/demolisher.jpg';
 import bomber from '../images/bomber.jpg';
 import tinkerer from '../images/tinkerer.jpg';
@@ -17,12 +17,12 @@ class Demolisher extends Component{
             <p className="card-text">{infoproducts[0].desc}</p>
             <p className="dwarvestext pointer" onClick={this.props.toggle}>{this.props.isMore}</p>
             {this.props.isMore==="(less)"&&<Demolisherinfo />}
-            <button type="button" className="btn-secondary buttontext my-2" identifier={infoproducts[0].identifier} onClick={this.props.decrease}>-</button>
+            <button type="button" className="btn-secondary buttontext my-2" identifier={infoproducts[0].id} onClick={this.props.decrease}>-</button>
             <span className='mx-5'>{this.props.counter0}</span>
-            <button type="button" className="btn-secondary buttontext" identifier={infoproducts[0].identifier} onClick={this.props.increase}>+</button>
+            <button type="button" className="btn-secondary buttontext" identifier={infoproducts[0].id} onClick={this.props.increase}>+</button>
             <p className='font-weight-bold my-2'>Price:{infoproducts[0].price} GP</p>
             <p className='text-center'><button  onClick={this.props.tobasket} type="button"
-            title={infoproducts[0].title} price={infoproducts[0].price} identifier={infoproducts[0].identifier}
+            title={infoproducts[0].title} price={infoproducts[0].price} identifier={infoproducts[0].id}
             className="btn btn-info text-dark">To Basket</button></p>
           </div>
         </div>
@@ -43,12 +43,12 @@ class Bomber extends Component{
           <p className="card-text">{infoproducts[1].desc}</p>
           <p className="dwarvestext pointer" onClick={this.props.toggle}>{this.props.isMore}</p>
           {this.props.isMore==="(less)"&&<Bomberinfo />}
-          <button type="button" className="btn-secondary buttontext my-2" identifier={infoproducts[1].identifier} onClick={this.props.decrease}>-</button>
+          <button type="button" className="btn-secondary buttontext my-2" identifier={infoproducts[1].id} onClick={this.props.decrease}>-</button>
           <span className='mx-5'>{this.props.counter1}</span>
-          <button type="button" className="btn-secondary buttontext" identifier={infoproducts[1].identifier} onClick={this.props.increase}>+</button>
+          <button type="button" className="btn-secondary buttontext" identifier={infoproducts[1].id} onClick={this.props.increase}>+</button>
           <p className='font-weight-bold my-2'>Price:{infoproducts[1].price} GP</p>
           <p className='text-center'><button  onClick={this.props.tobasket} type="button"
-          title={infoproducts[1].title} price={infoproducts[1].price} identifier={infoproducts[1].identifier}
+          title={infoproducts[1].title} price={infoproducts[1].price} identifier={infoproducts[1].id}
           className="btn btn-info text-dark">To Basket</button></p>
         </div>
       </div>
@@ -68,12 +68,12 @@ class Tinkerer extends Component{
           <p className="card-text">{infoproducts[2].desc}</p>
           <p className="dwarvestext pointer" onClick={this.props.toggle}>{this.props.isMore}</p>
           {this.props.isMore==="(less)"&&<Tinkererinfo />}
-          <button type="button" className="btn-secondary buttontext my-2" identifier={infoproducts[2].identifier} onClick={this.props.decrease}>-</button>
+          <button type="button" className="btn-secondary buttontext my-2" identifier={infoproducts[2].id} onClick={this.props.decrease}>-</button>
           <span className='mx-5'>{this.props.counter2}</span>
-          <button type="button" className="btn-secondary buttontext" identifier={infoproducts[2].identifier} onClick={this.props.increase}>+</button>
+          <button type="button" className="btn-secondary buttontext" identifier={infoproducts[2].id} onClick={this.props.increase}>+</button>
           <p className='font-weight-bold my-2'>Price:{infoproducts[2].price} GP</p>
           <p className='text-center'><button  onClick={this.props.tobasket} type="button"
-          title={infoproducts[2].title} price={infoproducts[2].price} identifier={infoproducts[2].identifier}
+          title={infoproducts[2].title} price={infoproducts[2].price} identifier={infoproducts[2].id}
           className="btn btn-info text-dark">To Basket</button></p>
         </div>
       </div>

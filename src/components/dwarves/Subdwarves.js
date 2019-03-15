@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {NavLink, Route} from 'react-router-dom';
-import {DemolisherContainer, BomberContainer, TinkererContainer} from './Dwarvescards';
+import {DemolisherContainer, BomberContainer, TinkererContainer} from './dwarvescards';
+
+
 export class Subdwarves extends Component{
   render(){
     return(
@@ -11,10 +13,10 @@ export class Subdwarves extends Component{
               <NavLink className="nav-link dwarvestext" to="/dwarves/demolisher">Demolisher</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link dwarvestext" to="/dwarves/bomber">Bomber</NavLink>
+              <NavLink className="nav-link dwarvestext" to="/dwarves/bomber" >Bomber</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link dwarvestext" to="/dwarves/tinkerer">Tinkerer</NavLink>
+              <NavLink className="nav-link dwarvestext" to="/dwarves/tinkerer" >Tinkerer</NavLink>
             </li>
           </ul>
         </nav>
