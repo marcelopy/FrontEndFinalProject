@@ -1,28 +1,28 @@
 import React, {Component} from 'react';
-import {infoproducts} from './infoproducts';
-import demolisher from '../images/demolisher.jpg';
-import bomber from '../images/bomber.jpg';
-import tinkerer from '../images/tinkerer.jpg';
+import {infoproducts} from '../infoproducts/infoproducts';
+import thunderstorm from '../images/thunderstorm.jpg';
+import nihilist from '../images/nihilist.jpg';
+import bob from '../images/bob.jpg';
 import {connect} from 'react-redux';
 import {toggle, increase, decrease, tobasket} from '../../redux/redux';
 
-class Demolisher extends Component{
+class Thunderstorm extends Component{
   render(){
     return(
       <>
-        <div className="card infocard dwarvesbg" >
-          <img src={demolisher} className="card-img-top img-fluid image" alt=""/>
+        <div className="card infocard dragonsbg" >
+          <img src={thunderstorm} className="card-img-top img-fluid image" alt=""/>
           <div className="card-body">
-            <h5 className="card-title">{infoproducts[0].title}</h5>
-            <p className="card-text">{infoproducts[0].desc}</p>
-            <p className="dwarvestext pointer" onClick={this.props.toggle}>{this.props.isMore}</p>
-            {this.props.isMore==="(less)"&&<Demolisherinfo />}
-            <button type="button" className="btn-secondary buttontext my-2" identifier={infoproducts[0].id} onClick={this.props.decrease}>-</button>
-            <span className='mx-5'>{this.props.counter0}</span>
-            <button type="button" className="btn-secondary buttontext" identifier={infoproducts[0].id} onClick={this.props.increase}>+</button>
-            <p className='font-weight-bold my-2'>Price:{infoproducts[0].price} GP</p>
+            <h5 className="card-title">{infoproducts[6].title}</h5>
+            <p className="card-text">{infoproducts[6].desc}</p>
+            <p className="dragonstext pointer" onClick={this.props.toggle}>{this.props.isMore}</p>
+            {this.props.isMore==="(less)"&&<Thunderstorminfo />}
+            <button type="button" className="btn-secondary buttontext my-2" identifier={infoproducts[6].identifier} onClick={this.props.decrease}>-</button>
+            <span className='mx-5'>{this.props.counter6}</span>
+            <button type="button" className="btn-secondary buttontext" identifier={infoproducts[6].identifier} onClick={this.props.increase}>+</button>
+            <p className='font-weight-bold my-2'>Price: {infoproducts[6].price} GP</p>
             <p className='text-center'><button  onClick={this.props.tobasket} type="button"
-            title={infoproducts[0].title} price={infoproducts[0].price} identifier={infoproducts[0].id}
+            title={infoproducts[6].title} price={infoproducts[6].price} identifier={infoproducts[6].identifier}
             className="btn btn-info text-dark">To Basket</button></p>
           </div>
         </div>
@@ -31,24 +31,24 @@ class Demolisher extends Component{
   }
 }
 
-class Bomber extends Component{
+class Nihilist extends Component{
 
   render(){
     return(
       <>
-      <div className="card infocard dwarvesbg" >
-        <img src={bomber} className="card-img-top img-fluid image" alt=""/>
+      <div className="card infocard dragonsbg" >
+        <img src={nihilist} className="card-img-top img-fluid image" alt=""/>
         <div className="card-body">
-          <h5 className="card-title">{infoproducts[1].title}</h5>
-          <p className="card-text">{infoproducts[1].desc}</p>
-          <p className="dwarvestext pointer" onClick={this.props.toggle}>{this.props.isMore}</p>
-          {this.props.isMore==="(less)"&&<Bomberinfo />}
-          <button type="button" className="btn-secondary buttontext my-2" identifier={infoproducts[1].id} onClick={this.props.decrease}>-</button>
-          <span className='mx-5'>{this.props.counter1}</span>
-          <button type="button" className="btn-secondary buttontext" identifier={infoproducts[1].id} onClick={this.props.increase}>+</button>
-          <p className='font-weight-bold my-2'>Price:{infoproducts[1].price} GP</p>
+          <h5 className="card-title">{infoproducts[7].title}</h5>
+          <p className="card-text">{infoproducts[7].desc}</p>
+          <p className="dragonstext pointer" onClick={this.props.toggle}>{this.props.isMore}</p>
+          {this.props.isMore==="(less)"&&<Nihilistinfo />}
+          <button type="button" className="btn-secondary buttontext my-2" identifier={infoproducts[7].identifier} onClick={this.props.decrease}>-</button>
+          <span className='mx-5'>{this.props.counter7}</span>
+          <button type="button" className="btn-secondary buttontext" identifier={infoproducts[7].identifier} onClick={this.props.increase}>+</button>
+          <p className='font-weight-bold my-2'>Price: {infoproducts[7].price} GP</p>
           <p className='text-center'><button  onClick={this.props.tobasket} type="button"
-          title={infoproducts[1].title} price={infoproducts[1].price} identifier={infoproducts[1].id}
+          title={infoproducts[7].title} price={infoproducts[7].price} identifier={infoproducts[7].identifier}
           className="btn btn-info text-dark">To Basket</button></p>
         </div>
       </div>
@@ -57,23 +57,23 @@ class Bomber extends Component{
   }
 }
 
-class Tinkerer extends Component{
+class Bob extends Component{
   render(){
     return(
       <>
-      <div className="card infocard dwarvesbg" >
-        <img src={tinkerer} className="card-img-top img-fluid image" alt=""/>
+      <div className="card infocard dragonsbg" >
+        <img src={bob} className="card-img-top img-fluid image" alt=""/>
         <div className="card-body">
-          <h5 className="card-title">{infoproducts[2].title}</h5>
-          <p className="card-text">{infoproducts[2].desc}</p>
-          <p className="dwarvestext pointer" onClick={this.props.toggle}>{this.props.isMore}</p>
-          {this.props.isMore==="(less)"&&<Tinkererinfo />}
-          <button type="button" className="btn-secondary buttontext my-2" identifier={infoproducts[2].id} onClick={this.props.decrease}>-</button>
-          <span className='mx-5'>{this.props.counter2}</span>
-          <button type="button" className="btn-secondary buttontext" identifier={infoproducts[2].id} onClick={this.props.increase}>+</button>
-          <p className='font-weight-bold my-2'>Price:{infoproducts[2].price} GP</p>
+          <h5 className="card-title">{infoproducts[8].title}</h5>
+          <p className="card-text">{infoproducts[8].desc}</p>
+          <p className="dragonstext pointer" onClick={this.props.toggle}>{this.props.isMore}</p>
+          {this.props.isMore==="(less)"&&<Bobinfo />}
+          <button type="button" className="btn-secondary buttontext my-2" identifier={infoproducts[8].identifier} onClick={this.props.decrease}>-</button>
+          <span className='mx-5'>{this.props.counter8}</span>
+          <button type="button" className="btn-secondary buttontext" identifier={infoproducts[8].identifier} onClick={this.props.increase}>+</button>
+          <p className='font-weight-bold my-2'>Price: {infoproducts[8].price} GP</p>
           <p className='text-center'><button  onClick={this.props.tobasket} type="button"
-          title={infoproducts[2].title} price={infoproducts[2].price} identifier={infoproducts[2].id}
+          title={infoproducts[8].title} price={infoproducts[8].price} identifier={infoproducts[8].identifier}
           className="btn btn-info text-dark">To Basket</button></p>
         </div>
       </div>
@@ -82,13 +82,13 @@ class Tinkerer extends Component{
   }
 }
 
-class Demolisherinfo extends Component{
+class Thunderstorminfo extends Component{
   render(){
     return(
       <>
-        <div className="card infocard moreinfocard dwarvesbg" >
+        <div className="card infocard moreinfocard dragonsbg" >
           <div className="card-body">
-            <h3 className="card-text">{infoproducts[0].extra}</h3>
+            <h3 className="card-text">{infoproducts[6].extra}</h3>
           </div>
         </div>
       </>
@@ -96,13 +96,13 @@ class Demolisherinfo extends Component{
   }
 }
 
-class Bomberinfo extends Component{
+class Nihilistinfo extends Component{
   render(){
     return(
       <>
-        <div className="card infocard moreinfocard dwarvesbg" >
+        <div className="card infocard moreinfocard dragonsbg" >
           <div className="card-body">
-            <h3 className="card-text">{infoproducts[1].extra}</h3>
+            <h3 className="card-text">{infoproducts[7].extra}</h3>
           </div>
         </div>
       </>
@@ -110,13 +110,13 @@ class Bomberinfo extends Component{
   }
 }
 
-class Tinkererinfo extends Component{
+class Bobinfo extends Component{
   render(){
     return(
       <>
-        <div className="card infocard moreinfocard dwarvesbg" >
+        <div className="card infocard moreinfocard dragonsbg" >
           <div className="card-body">
-            <h3 className="card-text">{infoproducts[2].extra}</h3>
+            <h3 className="card-text">{infoproducts[8].extra}</h3>
           </div>
         </div>
       </>
@@ -126,9 +126,9 @@ class Tinkererinfo extends Component{
 
 const mapStateToProps =state=>{
   return{
-    counter0:state.counter[0],
-    counter1:state.counter[1],
-    counter2:state.counter[2],
+    counter6:state.counter[6],
+    counter7:state.counter[7],
+    counter8:state.counter[8],
     isMore:state.isMore
   }
 }
@@ -142,6 +142,6 @@ const mapDispatchToProps = dispatch =>{
   }
 }
 
-export const DemolisherContainer = connect(mapStateToProps,mapDispatchToProps)(Demolisher)
-export const BomberContainer = connect(mapStateToProps,mapDispatchToProps)(Bomber)
-export const TinkererContainer = connect(mapStateToProps,mapDispatchToProps)(Tinkerer)
+export const ThunderstormContainer = connect(mapStateToProps,mapDispatchToProps)(Thunderstorm)
+export const NihilistContainer = connect(mapStateToProps,mapDispatchToProps)(Nihilist)
+export const BobContainer = connect(mapStateToProps,mapDispatchToProps)(Bob)

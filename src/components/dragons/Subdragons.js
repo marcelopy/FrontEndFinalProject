@@ -1,28 +1,28 @@
 import React, {Component} from 'react';
 import {NavLink, Route} from 'react-router-dom';
-import {DemolisherContainer, BomberContainer, TinkererContainer} from './dwarvescards';
+import {ThunderstormContainer, NihilistContainer, BobContainer} from './dragonscards';
 
 
-export class Subdwarves extends Component{
+export class Subdragons extends Component{
   render(){
     return(
       <>
-        <nav className="navbar navbar-expand-sm floating dwarvesnav border border-dark rounded">
+        <nav className="navbar navbar-expand-sm floating dragonsnav border border-dark rounded">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <NavLink className="nav-link dwarvestext" to="/dwarves/demolisher">Demolisher</NavLink>
+              <NavLink className="nav-link dragonstext" to="/dragons/thunderstorm">Thunderstorm</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link dwarvestext" to="/dwarves/bomber" >Bomber</NavLink>
+              <NavLink className="nav-link dragonstext" to="/dragons/nihilist" >Nihilist</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link dwarvestext" to="/dwarves/tinkerer" >Tinkerer</NavLink>
+              <NavLink className="nav-link dragonstext" to="/dragons/bob" >Bob</NavLink>
             </li>
           </ul>
         </nav>
-        <Route path="/dwarves/demolisher" component={DemolisherContainer} />
-        <Route path="/dwarves/bomber" component={BomberContainer} />
-        <Route path="/dwarves/tinkerer" component={TinkererContainer} />
+        <Route path="/dragons/thunderstorm" component={ThunderstormContainer} />
+        <Route path="/dragons/nihilist" component={NihilistContainer} />
+        <Route path="/dragons/bob" component={BobContainer} />
       </>
     )
   }

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
+import {Subdragons} from './subdragons';
 import dragonsimg from '../images/dragons.jpg'
-
+import {BasketContainer} from'../basket/basket';
 
 export class Dragons extends Component {
   render(){
@@ -11,7 +12,9 @@ export class Dragons extends Component {
                 <img alt='' className="rounded-circle w-50 m-2" src={dragonsimg}/>
                 <p className="rowheight">Should we say anything more? (no, seriously)</p>
                 <p className="rowheight">Ultimate weapon, all terrain fighter. But it will cost you. Dearly.</p>
-              </div>
+      </div>
+      <Subdragons />
+      <BasketContainer/>
       </>
     )
   }

@@ -20,7 +20,7 @@ class Demolisher extends Component{
             <button type="button" className="btn-secondary buttontext my-2" identifier={infoproducts[0].identifier} onClick={this.props.decrease}>-</button>
             <span className='mx-5'>{this.props.counter0}</span>
             <button type="button" className="btn-secondary buttontext" identifier={infoproducts[0].identifier} onClick={this.props.increase}>+</button>
-            <p className='font-weight-bold my-2'>Price:{infoproducts[0].price} GP</p>
+            <p className='font-weight-bold my-2'>Price: {infoproducts[0].price} GP</p>
             <p className='text-center'><button  onClick={this.props.tobasket} type="button"
             title={infoproducts[0].title} price={infoproducts[0].price} identifier={infoproducts[0].identifier}
             className="btn btn-info text-dark">To Basket</button></p>
@@ -46,7 +46,7 @@ class Bomber extends Component{
           <button type="button" className="btn-secondary buttontext my-2" identifier={infoproducts[1].identifier} onClick={this.props.decrease}>-</button>
           <span className='mx-5'>{this.props.counter1}</span>
           <button type="button" className="btn-secondary buttontext" identifier={infoproducts[1].identifier} onClick={this.props.increase}>+</button>
-          <p className='font-weight-bold my-2'>Price:{infoproducts[1].price} GP</p>
+          <p className='font-weight-bold my-2'>Price: {infoproducts[1].price} GP</p>
           <p className='text-center'><button  onClick={this.props.tobasket} type="button"
           title={infoproducts[1].title} price={infoproducts[1].price} identifier={infoproducts[1].identifier}
           className="btn btn-info text-dark">To Basket</button></p>
@@ -71,7 +71,7 @@ class Tinkerer extends Component{
           <button type="button" className="btn-secondary buttontext my-2" identifier={infoproducts[2].identifier} onClick={this.props.decrease}>-</button>
           <span className='mx-5'>{this.props.counter2}</span>
           <button type="button" className="btn-secondary buttontext" identifier={infoproducts[2].identifier} onClick={this.props.increase}>+</button>
-          <p className='font-weight-bold my-2'>Price:{infoproducts[2].price} GP</p>
+          <p className='font-weight-bold my-2'>Price: {infoproducts[2].price} GP</p>
           <p className='text-center'><button  onClick={this.props.tobasket} type="button"
           title={infoproducts[2].title} price={infoproducts[2].price} identifier={infoproducts[2].identifier}
           className="btn btn-info text-dark">To Basket</button></p>

@@ -2,8 +2,8 @@ import {createStore} from 'redux';
 
 const initialState={
   isMore:"(more)",
-  counter:[0,0,0],
-  partialcost:[0,0,0],
+  counter:[0,0,0,0,0,0,0,0,0],
+  partialcost:[0,0,0,0,0,0,0,0,0],
   totalbasket:0,
   basket:[]
 };

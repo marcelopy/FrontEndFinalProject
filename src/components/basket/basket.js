@@ -14,12 +14,12 @@ class Basket extends Component{
       <div className="card infocardbasket">
         <img alt='' src={basket} className="card-img-top"/>
         <div className="card-body">
-          <h5 className="card-title">Checkout Total:{this.props.totalbasket} GP</h5>
+          <h5 className="card-title">Checkout Total: {this.props.totalbasket} GP</h5>
           <div className="card-text">{this.props.basket.map((item,index)=>{
                   return(
 
                     <div key={index}>
-                  {item.qty>0 && <li className="list">{item.product}x{item.qty}={item.qty*item.price}GP<button title={item.product} price={item.price} identifier={item.identifier} className="closeX" onClick={this.props.removeitem}>x</button></li>}
+                  {item.qty>0 && <li className="list">{item.product} x {item.qty} = {item.qty*item.price} GP <span title={item.product} price={item.price} identifier={item.identifier} className="btn btn-outline-danger closeX" onClick={this.props.removeitem}>&times;</span></li>}
                     </div>
 
                   )
