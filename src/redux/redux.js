@@ -10,24 +10,27 @@ const initialState={
 
 const reducer =(state=initialState, action)=>{
   const copyOfState={...state};
+
   switch (action.type) {
+
     case 'toggle':
       copyOfState.isMore==="(more)"?copyOfState.isMore="(less)":copyOfState.isMore="(more)"
       return copyOfState;
+
     case 'increase':
       const indexinc=parseFloat(action.event.target.getAttribute('identifier'))
       copyOfState.counter[indexinc]=state.counter[indexinc]+1
       return copyOfState;
+
     case 'decrease':
       const indexdec=parseFloat(action.event.target.getAttribute('identifier'))
       copyOfState.counter[indexdec]>0?copyOfState.counter[indexdec]=state.counter[indexdec]-1:copyOfState.counter[indexdec]=0
       return copyOfState;
+
     case 'tobasket':
       const product=action.event.target.getAttribute('title');
       const price=parseFloat(action.event.target.getAttribute('price'));
       const identifier=parseFloat(action.event.target.getAttribute('identifier'));
-
-
       const isRepeat=copyOfState.basket.find(item=>item.product===product)
           if(isRepeat){
               isRepeat.qty=parseFloat(copyOfState.counter[identifier])
@@ -55,8 +58,6 @@ const reducer =(state=initialState, action)=>{
     case 'removeitem':
     const producttoremove=action.event.target.getAttribute('title');
     const identifiertoremove=action.event.target.getAttribute('identifier');
-
-
     const itemtoremove=copyOfState.basket.find(item=>item.product===producttoremove)
         if(itemtoremove){
             itemtoremove.qty=0
@@ -69,6 +70,13 @@ const reducer =(state=initialState, action)=>{
           }
           copyOfState.counter[identifiertoremove]=0;
     return copyOfState;
+
+    case 'resetoptions':
+        const resetidentifier=parseFloat(action.event.target.getAttribute('identifier'))
+        copyOfState.counter[resetidentifier]=0
+        copyOfState.isMore="(more)"
+    return copyOfState;
+
     default:
       return copyOfState;
 }
@@ -93,6 +101,9 @@ export const tobasket = ev=>{
 
 export const removeitem = ev=>{
   return {type:'removeitem', event:ev}
+}
+export const resetoptions = ev=>{
+  return {type:'resetoptions', event:ev}
 }
 
 export const store= createStore(reducer);

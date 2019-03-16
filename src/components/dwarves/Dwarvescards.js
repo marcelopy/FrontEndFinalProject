@@ -82,7 +82,7 @@ class Tinkerer extends Component{
   }
 }
 
-class Demolisherinfo extends Component{
+export class Demolisherinfo extends Component{
   render(){
     return(
       <>

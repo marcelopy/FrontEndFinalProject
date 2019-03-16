@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Subdwarves} from './subdwarves';
+import {SubdwarvesContainer} from './subdwarves';
 import dwarvesimg from '../images/dwarves.jpg';
 import {BasketContainer} from'../basket/basket';
 
@@ -13,7 +13,7 @@ export class Dwarves extends Component {
           <p className="rowheight">Get the toughest, rockiest, most inhebriated fighters of them all!</p>
           <p className="rowheight">Because nothing shows more love than tough love.</p>
       </div>
-      <Subdwarves />
+      <SubdwarvesContainer />
       <BasketContainer/>
       </>
     )
