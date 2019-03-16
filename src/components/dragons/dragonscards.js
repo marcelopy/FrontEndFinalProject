@@ -86,7 +86,7 @@ class Thunderstorminfo extends Component{
   render(){
     return(
       <>
-        <div className="card infocard moreinfocard dragonsbg" >
+        <div className="card moreinfocard dragonsbg" >
           <div className="card-body">
             <h3 className="card-text">{infoproducts[6].extra}</h3>
           </div>
@@ -100,7 +100,7 @@ class Nihilistinfo extends Component{
   render(){
     return(
       <>
-        <div className="card infocard moreinfocard dragonsbg" >
+        <div className="card moreinfocard dragonsbg" >
           <div className="card-body">
             <h3 className="card-text">{infoproducts[7].extra}</h3>
           </div>
@@ -114,7 +114,7 @@ class Bobinfo extends Component{
   render(){
     return(
       <>
-        <div className="card infocard moreinfocard dragonsbg" >
+        <div className="card moreinfocard dragonsbg" >
           <div className="card-body">
             <h3 className="card-text">{infoproducts[8].extra}</h3>
           </div>

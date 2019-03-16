@@ -16,7 +16,7 @@ export class Subdragons extends Component{
               <NavLink className="nav-link dragonstext" to="/dragons/nihilist" >Nihilist</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link dragonstext" to="/dragons/bob" >Bob</NavLink>
+              <NavLink className="nav-link dragonstext" to="/dragons/bob" >Sons of Uncle Bob</NavLink>
             </li>
           </ul>
         </nav>

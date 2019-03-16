@@ -86,7 +86,7 @@ class Demolisherinfo extends Component{
   render(){
     return(
       <>
-        <div className="card infocard moreinfocard dwarvesbg" >
+        <div className="card moreinfocard dwarvesbg" >
           <div className="card-body">
             <h3 className="card-text">{infoproducts[0].extra}</h3>
           </div>
@@ -100,7 +100,7 @@ class Bomberinfo extends Component{
   render(){
     return(
       <>
-        <div className="card infocard moreinfocard dwarvesbg" >
+        <div className="card moreinfocard dwarvesbg" >
           <div className="card-body">
             <h3 className="card-text">{infoproducts[1].extra}</h3>
           </div>
@@ -114,7 +114,7 @@ class Tinkererinfo extends Component{
   render(){
     return(
       <>
-        <div className="card infocard moreinfocard dwarvesbg" >
+        <div className="card moreinfocard dwarvesbg" >
           <div className="card-body">
             <h3 className="card-text">{infoproducts[2].extra}</h3>
           </div>

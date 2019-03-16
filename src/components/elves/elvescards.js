@@ -86,7 +86,7 @@ class Singerinfo extends Component{
   render(){
     return(
       <>
-        <div className="card infocard moreinfocard elvesbg" >
+        <div className="card moreinfocard elvesbg" >
           <div className="card-body">
             <h3 className="card-text">{infoproducts[3].extra}</h3>
           </div>
@@ -100,7 +100,7 @@ class Shadowerinfo extends Component{
   render(){
     return(
       <>
-        <div className="card infocard moreinfocard elvesbg" >
+        <div className="card moreinfocard elvesbg" >
           <div className="card-body">
             <h3 className="card-text">{infoproducts[4].extra}</h3>
           </div>
@@ -114,7 +114,7 @@ class Restorerinfo extends Component{
   render(){
     return(
       <>
-        <div className="card infocard moreinfocard elvesbg" >
+        <div className="card moreinfocard elvesbg" >
           <div className="card-body">
             <h3 className="card-text">{infoproducts[5].extra}</h3>
           </div>

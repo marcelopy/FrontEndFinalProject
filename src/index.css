@@ -50,7 +50,7 @@ p.pointer:hover{
   left: 1rem;
 }
 .image{
-  padding:1rem;
+  padding:.5rem;
   width: 70%;
   margin: 0 auto;
 }
@@ -69,10 +69,28 @@ p.pointer:hover{
 
 
 .elves{
-  background-color: #197e19!important;
+  background-color: #197e19;
+}
+.elvesnav{
+  background-color: #4c7e19;
+}
+.elvesbg{
+  background-color: #7e7e19;
+}
+.elvestext{
+  color: 	#34383b;
 }
 .dragons{
-  background-color: gold!important;
+  background-color: #deb900;
+}
+.dragonsnav{
+  background-color: #c5ab27;
+}
+.dragonsbg{
+  background-color: #c58327;
+}
+.dragonstext{
+  color: 	#34383b;
 }
 
 .infocard{
@@ -81,12 +99,12 @@ p.pointer:hover{
   top:8rem;
   left:1rem;
   width:17rem;
-  padding-bottom: 1rem;
+  height: 30rem;
 }
 
 .infocardbasket{
   box-sizing: border-box;
-  background-color: #ae00ff;
+  background-color: #9e2bcf;
   position:absolute;
   top:4rem;
   right:1rem;
@@ -125,3 +143,6 @@ p.pointer:hover{
       line-height  : .5;
       border-radius : .2rem;
   }
+.closeX:hover{
+  cursor:pointer;
+}
