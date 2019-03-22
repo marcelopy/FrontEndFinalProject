@@ -66,8 +66,6 @@ p.pointer:hover{
 .dwarvestext{
   color: 	#34383b;
 }
-
-
 .elves{
   background-color: #197e19;
 }
@@ -92,7 +90,6 @@ p.pointer:hover{
 .dragonstext{
   color: 	#34383b;
 }
-
 .infocard{
   box-sizing: border-box;
   position:absolute;
@@ -101,10 +98,9 @@ p.pointer:hover{
   width:17rem;
   height: 30rem;
 }
-
 .infocardbasket{
   box-sizing: border-box;
-  background-color: #9e2bcf;
+  background-color: #7c119c;
   position:absolute;
   top:4rem;
   right:1rem;
@@ -145,4 +141,15 @@ p.pointer:hover{
   }
 .closeX:hover{
   cursor:pointer;
+}
+.show{
+     position:absolute;
+     box-sizing: border-box;
+     text-align: center;
+     line-height: 3rem;
+     top:0rem;
+     left:0rem;
+     padding:10%;
+     width: 100%;
+     background-color: #759fc7;
 }

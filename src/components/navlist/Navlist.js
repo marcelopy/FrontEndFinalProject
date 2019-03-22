@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
 import {NavLink, Route} from 'react-router-dom';
 import {Home} from '../home/Home';
+import {Logout} from '../home/Logout';
 import {Dwarves} from '../dwarves/Dwarves';
 import {Elves} from '../elves/Elves';
 import {Dragons} from '../dragons/Dragons';
+
 
 
 export class Navlist extends Component {
@@ -25,6 +27,9 @@ export class Navlist extends Component {
               <li className="nav-item active mr-3 list">
                 <NavLink className="list" to="/Dragons">Dragons</NavLink>
               </li>
+              <li className="nav-item active mr-3 list">
+                <NavLink className="list" to="/Logout"></NavLink>
+              </li>
             </ul>
           </div>
         </nav>
@@ -32,6 +37,7 @@ export class Navlist extends Component {
         <Route path="/Dwarves" component={Dwarves} />
         <Route path="/Elves" component={Elves} />
         <Route path="/Dragons" component={Dragons} />
+        <Route path="/Logout" component={Logout} />
       </>
     )
   }

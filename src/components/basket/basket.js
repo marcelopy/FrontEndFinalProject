@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import basket from '../images/basket.jpg';
 import {connect} from 'react-redux';
-import {removeitem} from '../../redux/redux';
-import {NavLink} from 'react-router-dom';
+import {removeitem, resetcounter} from '../../redux/redux';
+import {NavLink, Route} from 'react-router-dom';
+import {Logout} from '../home/Logout';
 
 
 
@@ -25,8 +26,9 @@ class Basket extends Component{
                   )
           })}</div>
         </div>
-          <NavLink className="nav-link" to="/logout" onClick={this.props.resetCounter}>Logout</NavLink>
+          <NavLink  to="/logout" onClick={this.props.resetcounter}><button className="btn btn-info text-dark">Logout</button></NavLink>
       </div>
+      <Route exact path="/logout" component={Logout} />
       </>
     )
   }
@@ -40,7 +42,8 @@ const mapStateToProps = state =>{
 
 const mapDispatchToProps = dispatch =>{
   return{
-    removeitem: ev => dispatch(removeitem(ev))
+    removeitem: ev => dispatch(removeitem(ev)),
+    resetcounter:ev=> dispatch(resetcounter(ev))
   }
 }
 

@@ -77,6 +77,12 @@ const reducer =(state=initialState, action)=>{
         copyOfState.isMore="(more)"
     return copyOfState;
 
+    case 'resetcounter':
+      copyOfState.basket=[]
+      copyOfState.totalbasket=0
+      copyOfState.isOut=true
+    return copyOfState;
+
     default:
       return copyOfState;
 }
@@ -104,6 +110,10 @@ export const removeitem = ev=>{
 }
 export const resetoptions = ev=>{
   return {type:'resetoptions', event:ev}
+}
+
+export const resetcounter= ev=>{
+  return {type: 'resetcounter', event:ev}
 }
 
 export const store= createStore(reducer);
