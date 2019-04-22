@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {SubdwarvesContainer} from './subdwarves';
+import {SubdwarvesContainer} from './Subdwarves';
 import dwarvesimg from '../images/dwarves.jpg';
 import {BasketContainer} from'../basket/basket';
 

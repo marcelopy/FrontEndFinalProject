@@ -1,3 +1,7 @@
+html{
+  font-size: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -6,6 +10,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: scroll;
 }
 
 code {
@@ -34,10 +39,6 @@ p.pointer:hover{
 .rowheight{
   height:2rem;
   font-weight: bolder;
-}
-
-.containerheight{
-  height:36rem;
 }
 
 .padding{
@@ -96,7 +97,6 @@ p.pointer:hover{
   top:8rem;
   left:1rem;
   width:17rem;
-  height: 30rem;
 }
 .infocardbasket{
   box-sizing: border-box;

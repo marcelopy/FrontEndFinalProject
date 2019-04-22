@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {NavLink, Route} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {infoproducts} from '../infoproducts/infoproducts';
-import {DemolisherContainer, BomberContainer, TinkererContainer} from './dwarvescards';
+import {DemolisherContainer, BomberContainer, TinkererContainer} from './Dwarvescards';
 import {resetoptions} from '../../redux/redux';
 
 

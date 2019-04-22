@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {SubdragonsContainer} from './subdragons';
+import {SubdragonsContainer} from './Subdragons';
 import dragonsimg from '../images/dragons.jpg'
 import {BasketContainer} from'../basket/basket';
 
